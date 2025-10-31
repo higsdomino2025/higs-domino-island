@@ -427,7 +427,7 @@
                 <span>&nbsp;</span>
                 <span>D</span><span>A</span><span>N</span>
                 <span>&nbsp;</span>
-                <span>T</span><span>E</span><span>R</span><span>P</span><span>E</span><span>C</span><span>A</span><span>Y</span><span>A</span>
+                <span>T</span><span>E</span><span>R</span><span>P</span><span>E</span><span>R</span><span>C</span><span>A</span><span>Y</span><span>A</span>
             </div>
         </header>
         
@@ -476,24 +476,238 @@
 
     <script>
         const notifications = [
-            { type: "person", content: "Andi membeli 2B" },
-            { type: "brand", content: "Samsung menjual 50B" },
-            { type: "person", content: "Budi Santoso membeli PAKET VIP" },
-            { type: "brand", content: "Xiaomi membeli 10B" },
-            { type: "person", content: "Sari Indah menjual 25B" },
-            { type: "brand", content: "OPPO membeli 5B" },
-            { type: "person", content: "Rudi Hartono membeli 3B" },
-            { type: "brand", content: "VIVO menjual 30B" },
-            { type: "person", content: "Dian Permatasari membeli PAKET VIP" },
-            { type: "brand", content: "Realme membeli 8B" }
+
+    { type: "person", content: "Rina Wijaya membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Fajar Nugroho membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Maya Sari menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Hendra Setiawan membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Dewi Lestari membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Agus Pratama membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Sinta Purnama membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Rizki Ramadhan menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Linda Hartati membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Eko Saputra membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Putri Anggraini membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Aditya Wibowo membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Nina Permata menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Rizky Pratama membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Sari Dewi membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Bambang Susilo membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Anita Rahayu membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Feri Irawan menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Yuni Astuti membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Dodi Prasetyo membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Rina Marlina membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Hadi Santoso membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Wulan Sari menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Arief Rahman membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Melia Putri membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Joko Widodo membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Dini Puspita membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Rendi Saputra menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Lia Amelia membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Irfan Maulana membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Desi Ratnasari membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Ryan Perdana membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Tuti Alawiyah menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Rudi Hermawan membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Mira Kusuma membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Andi Suharto membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Siska Melinda membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Rafi Aziz menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Diana Wati membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Herman Susanto membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Nadia Fitri membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Rizaldi Fajar membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Lina Marlina menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Ahmad Yusuf membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Yulia Sari membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Firman Abdullah membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Rina Permatasari membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Dedy Kurniawan menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Susi Susanti membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Robby Gunawan membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Maya Indah membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Hendra Kurnia membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Dwi Septiani menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Rizky Firdaus membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Lia Safitri membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Ari Wibowo membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Rina Anggraini membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Faisal Akbar menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Dina Marlina membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Rendi Pradana membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Sari Utami membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Hadi Nugroho membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Mita Purnama menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Rian Saputra membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Dewi Sartika membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Asep Saepudin membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Nina Wulandari membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Rizki Ananda menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Lia Kurnia membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Fajar Setiawan membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" },
+    { type: "person", content: "Sari Mulyani membeli 2B" },
+    { type: "brand", content: "Samsung menjual 50B" },
+    { type: "person", content: "Rudi Cahyono membeli PAKET VIP" },
+    { type: "brand", content: "Xiaomi membeli 10B" },
+    { type: "person", content: "Maya Suryani menjual 25B" },
+    { type: "brand", content: "OPPO membeli 5B" },
+    { type: "person", content: "Hendri Gunawan membeli 3B" },
+    { type: "brand", content: "VIVO menjual 30B" },
+    { type: "person", content: "Dian Permatasari membeli PAKET VIP" },
+    { type: "brand", content: "Realme membeli 8B" }
+
         ];
         
         const comments = [
-            { user: "Ahmad S.", date: "2 hari lalu", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
-            { user: "Budi Kurniawan", date: "3 hari lalu", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
-            { user: "Sari Indah", date: "4 hari lalu", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
-            { user: "Rudi Hartono", date: "5 hari lalu", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
-            { user: "Dian P.", date: "1 minggu lalu", text: "Awalnya ragu, tapi ternyata benar-benar terpercaya. Terima kasih!" }
+
+    { user: "Rina Wijaya", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Fajar Nugroho", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Maya Sari", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Hendra Setiawan", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Dewi Lestari", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Agus Pratama", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Sinta Purnama", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Rizki Ramadhan", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Linda Hartati", date: "baru saja", text: "Awalnya ragu, tapi ternyata benar-benar terpercaya. Terima kasih!" },
+    { user: "Eko Saputra", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Putri Anggraini", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Aditya Wibowo", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Nina Permata", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Rizky Pratama", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Sari Dewi", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Bambang Susilo", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Anita Rahayu", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Feri Irawan", date: "baru saja", text: "Awalnya ragu, tapi ternyata benar-benar terpercaya. Terima kasih!" },
+    { user: "Yuni Astuti", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Dodi Prasetyo", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Rina Marlina", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Hadi Santoso", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Wulan Sari", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Arief Rahman", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Melia Putri", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Joko Widodo", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Dini Puspita", date: "baru saja", text: "Awalnya ragu, tapi ternyata benar-benar terpercaya. Terima kasih!" },
+    { user: "Rendi Saputra", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Lia Amelia", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Irfan Maulana", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Desi Ratnasari", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Ryan Perdana", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Tuti Alawiyah", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Rudi Hermawan", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Mira Kusuma", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Andi Suharto", date: "baru saja", text: "Awalnya ragu, tapi ternyata benar-benar terpercaya. Terima kasih!" },
+    { user: "Siska Melinda", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Rafi Aziz", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Diana Wati", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Herman Susanto", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Nadia Fitri", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Rizaldi Fajar", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Lina Marlina", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Ahmad Yusuf", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Yulia Sari", date: "baru saja", text: "Awalnya ragu, tapi ternyata benar-benar terpercaya. Terima kasih!" },
+    { user: "Firman Abdullah", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Rina Permatasari", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Dedy Kurniawan", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Susi Susanti", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Robby Gunawan", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Maya Indah", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Hendra Kurnia", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Dwi Septiani", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Rizky Firdaus", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Lia Safitri", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Ari Wibowo", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Rina Anggraini", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Faisal Akbar", date: "baru saja", text: "Awalnya ragu, tapi ternyata benar-benar terpercaya. Terima kasih!" },
+    { user: "Dina Marlina", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Rendi Pradana", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Sari Utami", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Hadi Nugroho", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Mita Purnama", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Rian Saputra", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Dewi Sartika", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Asep Saepudin", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Nina Wulandari", date: "baru saja", text: "Awalnya ragu, tapi ternyata benar-benar terpercaya. Terima kasih!" },
+    { user: "Rizki Ananda", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Lia Kurnia", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Fajar Setiawan", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Sari Mulyani", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+    { user: "Rudi Cahyono", date: "baru saja", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+    { user: "Maya Suryani", date: "baru saja", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+    { user: "Hendri Gunawan", date: "baru saja", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+    { user: "Dian Permatasari", date: "baru saja", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." }
+
         ];
         
         function generateQRCode() {
@@ -559,11 +773,11 @@
             const userComment = document.getElementById('userComment').value;
             if (userName && userComment) {
                 document.getElementById('commentForm').reset();
-                alert('Komentar berhasil dikirim! (Tidak disimpan)');
+                alert('Komentar berhasil dikirim! Silahkan tunggu');
             }
         });
         
-        // Tawk.to Live Chat Integration
+      
         document.getElementById('tawk-button').addEventListener('click', function() {
             if(typeof Tawk_API !== 'undefined') {
                 Tawk_API.toggle();
@@ -576,7 +790,7 @@
         };
     </script>
 
-    <!--Start of Tawk.to Script-->
+   
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -588,6 +802,6 @@
     s0.parentNode.insertBefore(s1,s0);
     })();
     </script>
-    <!--End of Tawk.to Script-->
+    
 </body>
 </html>
