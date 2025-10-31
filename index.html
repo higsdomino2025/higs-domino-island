@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HIGS DOMINO ISLAND - VIP</title>
     <style>
-       
         * {
             margin: 0;
             padding: 0;
@@ -20,7 +19,6 @@
             overflow-x: hidden;
             position: relative;
         }
-        
         
         .ball-animation {
             position: fixed;
@@ -68,108 +66,35 @@
         }
         
         @keyframes floatBall1 {
-            0% {
-                top: 10%;
-                left: -5%;
-                transform: rotate(0deg);
-            }
-            25% {
-                top: 30%;
-                left: 25%;
-                transform: rotate(90deg);
-            }
-            50% {
-                top: 60%;
-                left: 50%;
-                transform: rotate(180deg);
-            }
-            75% {
-                top: 40%;
-                left: 75%;
-                transform: rotate(270deg);
-            }
-            100% {
-                top: 10%;
-                left: 105%;
-                transform: rotate(360deg);
-            }
+            0% { top: 10%; left: -5%; transform: rotate(0deg); }
+            25% { top: 30%; left: 25%; transform: rotate(90deg); }
+            50% { top: 60%; left: 50%; transform: rotate(180deg); }
+            75% { top: 40%; left: 75%; transform: rotate(270deg); }
+            100% { top: 10%; left: 105%; transform: rotate(360deg); }
         }
         
         @keyframes floatBall2 {
-            0% {
-                top: 80%;
-                left: 105%;
-                transform: rotate(0deg);
-            }
-            25% {
-                top: 60%;
-                left: 75%;
-                transform: rotate(-90deg);
-            }
-            50% {
-                top: 30%;
-                left: 50%;
-                transform: rotate(-180deg);
-            }
-            75% {
-                top: 50%;
-                left: 25%;
-                transform: rotate(-270deg);
-            }
-            100% {
-                top: 80%;
-                left: -5%;
-                transform: rotate(-360deg);
-            }
+            0% { top: 80%; left: 105%; transform: rotate(0deg); }
+            25% { top: 60%; left: 75%; transform: rotate(-90deg); }
+            50% { top: 30%; left: 50%; transform: rotate(-180deg); }
+            75% { top: 50%; left: 25%; transform: rotate(-270deg); }
+            100% { top: 80%; left: -5%; transform: rotate(-360deg); }
         }
         
         @keyframes floatBall3 {
-            0% {
-                top: 20%;
-                left: 50%;
-                transform: rotate(0deg);
-            }
-            33% {
-                top: 70%;
-                left: 80%;
-                transform: rotate(120deg);
-            }
-            66% {
-                top: 40%;
-                left: 20%;
-                transform: rotate(240deg);
-            }
-            100% {
-                top: 20%;
-                left: 50%;
-                transform: rotate(360deg);
-            }
+            0% { top: 20%; left: 50%; transform: rotate(0deg); }
+            33% { top: 70%; left: 80%; transform: rotate(120deg); }
+            66% { top: 40%; left: 20%; transform: rotate(240deg); }
+            100% { top: 20%; left: 50%; transform: rotate(360deg); }
         }
         
         @keyframes floatBall4 {
-            0% {
-                top: 60%;
-                left: 20%;
-                transform: rotate(0deg);
-            }
-            33% {
-                top: 20%;
-                left: 70%;
-                transform: rotate(-120deg);
-            }
-            66% {
-                top: 80%;
-                left: 60%;
-                transform: rotate(-240deg);
-            }
-            100% {
-                top: 60%;
-                left: 20%;
-                transform: rotate(-360deg);
-            }
+            0% { top: 60%; left: 20%; transform: rotate(0deg); }
+            33% { top: 20%; left: 70%; transform: rotate(-120deg); }
+            66% { top: 80%; left: 60%; transform: rotate(-240deg); }
+            100% { top: 60%; left: 20%; transform: rotate(-360deg); }
         }
         
-       
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -178,15 +103,10 @@
             z-index: 1;
         }
         
-       
         header {
             text-align: center;
             padding: 30px 0;
             position: relative;
-        }
-        
-        .logo {
-            margin-bottom: 20px;
         }
         
         .title {
@@ -213,7 +133,6 @@
             margin-bottom: 30px;
         }
         
-        
         .animated-text {
             display: flex;
             justify-content: center;
@@ -229,18 +148,11 @@
             color: #ffd700;
         }
         
-     
         @keyframes bounce {
-            from {
-                transform: translateY(0);
-            }
-            to {
-                transform: translateY(-15px);
-                text-shadow: 0 5px 10px rgba(255, 215, 0, 0.5);
-            }
+            from { transform: translateY(0); }
+            to { transform: translateY(-15px); text-shadow: 0 5px 10px rgba(255, 215, 0, 0.5); }
         }
         
-       
         .animated-text span:nth-child(1) { animation-delay: 0.1s; }
         .animated-text span:nth-child(2) { animation-delay: 0.2s; }
         .animated-text span:nth-child(3) { animation-delay: 0.3s; }
@@ -259,7 +171,6 @@
         .animated-text span:nth-child(16) { animation-delay: 1.6s; }
         .animated-text span:nth-child(17) { animation-delay: 1.7s; }
         
-      
         #tawk-chat-container {
             position: fixed;
             bottom: 20px;
@@ -287,11 +198,6 @@
             box-shadow: 0 8px 20px rgba(255, 215, 0, 0.7);
         }
         
-        .tawk-button i {
-            font-size: 1.2rem;
-        }
-        
-      
         .notification-panel {
             position: fixed;
             top: 20px;
@@ -330,14 +236,9 @@
         }
         
         @keyframes glow {
-            from {
-                box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
-            }
-            to {
-                box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
-            }
+            from { box-shadow: 0 0 5px rgba(255, 215, 0, 0.3); }
+            to { box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); }
         }
-        
         
         .comment-form-section {
             background: rgba(255, 255, 255, 0.05);
@@ -411,7 +312,6 @@
             box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
         }
         
-        
         .qrcode-section {
             text-align: center;
             margin: 30px 0;
@@ -440,7 +340,6 @@
             50% { opacity: 1; }
             100% { opacity: 0.7; }
         }
-        
         
         .comments-section {
             margin-top: 50px;
@@ -492,12 +391,8 @@
             line-height: 1.5;
         }
         
-       
         @media (max-width: 768px) {
-            .title {
-                font-size: 2.5rem;
-            }
-            
+            .title { font-size: 2.5rem; }
             .notification-panel {
                 position: relative;
                 width: 100%;
@@ -505,11 +400,7 @@
                 right: 0;
                 margin-bottom: 20px;
             }
-            
-            .animated-text {
-                font-size: 1.5rem;
-            }
-            
+            .animated-text { font-size: 1.5rem; }
             .comment-form-section {
                 margin-right: auto;
                 max-width: 100%;
@@ -518,7 +409,6 @@
     </style>
 </head>
 <body>
-    
     <div class="ball-animation">
         <div class="ball ball-1"></div>
         <div class="ball ball-2"></div>
@@ -528,41 +418,22 @@
     
     <div class="container">
         <header>
-            <div class="logo">
-                
-            </div>
+            <div class="logo"></div>
             <h1 class="title">HIGS DOMINO ISLAND</h1>
             <div class="vip-badge">VIP</div>
             
-            
             <div class="animated-text">
-                <span>C</span>
-                <span>E</span>
-                <span>P</span>
-                <span>A</span>
-                <span>T</span>
+                <span>C</span><span>E</span><span>P</span><span>A</span><span>T</span>
                 <span>&nbsp;</span>
-                <span>D</span>
-                <span>A</span>
-                <span>N</span>
+                <span>D</span><span>A</span><span>N</span>
                 <span>&nbsp;</span>
-                <span>T</span>
-                <span>E</span>
-                <span>R</span>
-                <span>P</span>
-                <span>E</span>
-                <span>C</span>
-                <span>A</span>
-                <span>Y</span>
-                <span>A</span>
+                <span>T</span><span>E</span><span>R</span><span>P</span><span>E</span><span>C</span><span>A</span><span>Y</span><span>A</span>
             </div>
         </header>
         
         <div class="notification-panel">
             <div class="notification-header">Aktivitas Terbaru</div>
-            <ul class="notification-list" id="notificationList">
-               
-            </ul>
+            <ul class="notification-list" id="notificationList"></ul>
         </div>
         
         <section class="comment-form-section">
@@ -583,7 +454,6 @@
         <section class="qrcode-section" id="qrcodeSection">
             <h2 class="section-title">Pembayaran QRIS</h2>
             <div class="qrcode-container">
-                
                 <canvas id="qrcodeCanvas"></canvas>
             </div>
             <div class="waiting-message" id="waitingMessage">SILAHKAN TUNGGU...</div>
@@ -594,13 +464,10 @@
                 <h2 class="section-title">Komentar Pelanggan</h2>
                 <div class="comments-count">7K Komentar</div>
             </div>
-            <div class="comments-list" id="commentsList">
-               
-            </div>
+            <div class="comments-list" id="commentsList"></div>
         </section>
     </div>
 
-    <!-- Live Chat Tawk.to -->
     <div id="tawk-chat-container">
         <button class="tawk-button" id="tawk-button">
             <i>💬</i> Live Chat
@@ -608,7 +475,6 @@
     </div>
 
     <script>
-        
         const notifications = [
             { type: "person", content: "Andi membeli 2B" },
             { type: "brand", content: "Samsung menjual 50B" },
@@ -619,161 +485,60 @@
             { type: "person", content: "Rudi Hartono membeli 3B" },
             { type: "brand", content: "VIVO menjual 30B" },
             { type: "person", content: "Dian Permatasari membeli PAKET VIP" },
-            { type: "brand", content: "Realme membeli 8B" },
-            { type: "person", content: "Fajar Setiawan menjual 15B" },
-            { type: "brand", content: "Apple membeli 12B" },
-            { type: "person", content: "Maya Wulandari membeli PAKET VIP" },
-            { type: "brand", content: "Huawei menjual 40B" },
-            { type: "person", content: "Rizki Ramadhan membeli 6B" },
-            { type: "brand", content: "Sony membeli 7B" },
-            { type: "person", content: "Nina Susanti menjual 20B" },
-            { type: "brand", content: "LG membeli 9B" },
-            { type: "person", content: "Hendra Kurniawan membeli PAKET VIP" },
-            { type: "brand", content: "Asus menjual 35B" },
-            { type: "person", content: "Siti Nurhaliza membeli 4B" },
-            { type: "brand", content: "Lenovo membeli 11B" },
-            { type: "person", content: "Agus Salim menjual 45B" },
-            { type: "brand", content: "Acer membeli PAKET VIP" },
-            { type: "person", content: "Rina Melati membeli 13B" },
-            { type: "brand", content: "Dell menjual 55B" },
-            { type: "person", content: "Bambang Pamungkas membeli PAKET VIP" },
-            { type: "brand", content: "HP membeli 14B" },
-            { type: "person", content: "Dewi Sartika menjual 60B" },
-            { type: "brand", content: "Toshiba membeli 16B" },
-            { type: "person", content: "Eko Prasetyo membeli PAKET VIP" },
-            { type: "brand", content: "MSI menjual 65B" },
-            { type: "person", content: "Fitri Handayani membeli 17B" },
-            { type: "brand", content: "Gigabyte membeli 18B" },
-            { type: "person", content: "Gilang Ramadan menjual 70B" },
-            { type: "brand", content: "ZTE membeli PAKET VIP" },
-            { type: "person", content: "Hana Lestari membeli 19B" },
-            { type: "brand", content: "Infinix menjual 75B" },
-            { type: "person", content: "Iwan Setiawan membeli PAKET VIP" },
-            { type: "brand", content: "Tecno membeli 21B" },
-            { type: "person", content: "Jihan Aulia menjual 80B" },
-            { type: "brand", content: "OnePlus membeli 22B" },
-            { type: "person", content: "Kiki Amalia membeli PAKET VIP" },
-            { type: "brand", content: "Google menjual 85B" },
-            { type: "person", content: "Lukman Hakim membeli 23B" },
-            { type: "brand", content: "Motorola membeli 24B" },
-            { type: "person", content: "Mila Kurnia menjual 90B" },
-            { type: "brand", content: "Blackberry membeli PAKET VIP" },
-            { type: "person", content: "Nanda Pratama membeli 26B" },
-            { type: "brand", content: "HTC menjual 95B" }
+            { type: "brand", content: "Realme membeli 8B" }
         ];
-        
         
         const comments = [
             { user: "Ahmad S.", date: "2 hari lalu", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
             { user: "Budi Kurniawan", date: "3 hari lalu", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
             { user: "Sari Indah", date: "4 hari lalu", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
             { user: "Rudi Hartono", date: "5 hari lalu", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
-            { user: "Dian P.", date: "1 minggu lalu", text: "Awalnya ragu, tapi ternyata benar-benar terpercaya. Terima kasih!" },
-            { user: "Fajar S.", date: "1 minggu lalu", text: "Proses cepat, seller ramah. Pokoknya recommended banget!" },
-            { user: "Maya W.", date: "2 minggu lalu", text: "Barang sesuai pesanan, proses cepat. Puas banget!" },
-            { user: "Rizki A.", date: "2 minggu lalu", text: "Seller sangat profesional dan cepat tanggap. Terima kasih banyak!" },
-            { user: "Nina S.", date: "3 minggu lalu", text: "Sudah beli beberapa kali dan selalu puas. Pelayanan terbaik!" },
-            { user: "Hendra K.", date: "3 minggu lalu", text: "Proses cepat dan aman. Seller sangat terpercaya!" },
-            { user: "Irfan Hakim", date: "1 bulan lalu", text: "Transaksi lancar, barang sampai dengan cepat. Mantap!" },
-            { user: "Joko Susilo", date: "1 bulan lalu", text: "Seller responsif dan ramah. Proses tidak berbelit-belit." },
-            { user: "Kartika Sari", date: "1 bulan lalu", text: "Pengiriman super cepat! Barang sesuai ekspektasi." },
-            { user: "Lukman N.", date: "1 bulan lalu", text: "Harga kompetitif, pelayanan memuaskan. Akan repeat order!" },
-            { user: "M. Rizky", date: "1 bulan lalu", text: "Terima kasih untuk pelayanan yang excellent!" },
-            { user: "Nadia Putri", date: "2 bulan lalu", text: "Seller sangat sabar menjawab pertanyaan. Recommended!" },
-            { user: "Oscar Dinata", date: "2 bulan lalu", text: "Proses mudah dan cepat. Tidak perlu menunggu lama." },
-            { user: "Putra Maulana", date: "2 bulan lalu", text: "Kualitas barang bagus, pengiriman tepat waktu." },
-            { user: "Queen Felisha", date: "2 bulan lalu", text: "Seller profesional banget! Puas dengan pelayanannya." },
-            { user: "Rangga Pratama", date: "2 bulan lalu", text: "Transaksi aman dan terpercaya. Thank you seller!" },
-            { user: "Santi Wulandari", date: "3 bulan lalu", text: "Barang original, pengiriman cepat. Good job!" },
-            { user: "Taufik Hidayat", date: "3 bulan lalu", text: "Pelayanan memuaskan, respon cepat. Sukses selalu!" },
-            { user: "Umi Kulsum", date: "3 bulan lalu", text: "Seller ramah dan pengiriman sangat cepat. Recommended!" },
-            { user: "Vino Bastian", date: "3 bulan lalu", text: "Proses transaksi mudah dan cepat. Very satisfied!" },
-            { user: "Wulan Guritno", date: "4 bulan lalu", text: "Barang sesuai deskripsi, pengiriman tepat waktu." },
-            { user: "Xavier Miller", date: "4 bulan lalu", text: "Seller sangat helpful dan fast respon. Good!" },
-            { user: "Yuniarta D.", date: "4 bulan lalu", text: "Pengalaman belanja yang menyenangkan. Terima kasih!" },
-            { user: "Zahra Mutia", date: "4 bulan lalu", text: "Seller terpercaya, barang berkualitas. Will order again!" },
-            { user: "Aldi Taher", date: "5 bulan lalu", text: "Proses cepat, komunikasi baik. Very recommended!" },
-            { user: "Baim Wong", date: "5 bulan lalu", text: "Pelayanan excellent! Seller sangat profesional." },
-            { user: "Cindy Gulla", date: "5 bulan lalu", text: "Barang sampai dengan selamat, packing rapi." },
-            { user: "Deddy S.", date: "5 bulan lalu", text: "Seller fast respon dan ramah. Happy with the service!" },
-            { user: "Eko Kurniawan", date: "6 bulan lalu", text: "Transaksi lancar, pengiriman cepat. Satisfied!" },
-            { user: "Fitri Octora", date: "6 bulan lalu", text: "Seller sangat kooperatif dan helpful. Thanks!" },
-            { user: "Guntur S.", date: "6 bulan lalu", text: "Barang sesuai pesanan, kualitas bagus. Recommended!" },
-            { user: "Hesti Purwadinata", date: "6 bulan lalu", text: "Pengiriman super cepat! Seller sangat responsif." },
-            { user: "Ivan Gunawan", date: "7 bulan lalu", text: "Proses mudah, tidak ribet. Very good service!" },
-            { user: "Jessica Mila", date: "7 bulan lalu", text: "Seller ramah dan pengiriman tepat waktu. Perfect!" },
-            { user: "Kevin Aprilio", date: "7 bulan lalu", text: "Barang original, harga reasonable. Will be back!" },
-            { user: "Luna Maya", date: "7 bulan lalu", text: "Seller sangat profesional dan fast respon. Excellent!" },
-            { user: "Tolol", date: "7 bulan lalu", text: "Seller sangat profesional dan fast respon. Excellent!" },
+            { user: "Dian P.", date: "1 minggu lalu", text: "Awalnya ragu, tapi ternyata benar-benar terpercaya. Terima kasih!" }
         ];
-        
         
         function generateQRCode() {
             const canvas = document.getElementById('qrcodeCanvas');
             const ctx = canvas.getContext('2d');
-            
             canvas.width = 200;
             canvas.height = 200;
-            
-            
             ctx.fillStyle = '#FFFFFF';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-           
             ctx.fillStyle = '#000000';
-            
-            
             ctx.fillRect(10, 10, 50, 50);
             ctx.fillRect(canvas.width - 60, 10, 50, 50);
             ctx.fillRect(10, canvas.height - 60, 50, 50);
-            
-            
             for (let i = 0; i < 100; i++) {
                 const x = Math.floor(Math.random() * 120) + 40;
                 const y = Math.floor(Math.random() * 120) + 40;
                 const size = Math.floor(Math.random() * 10) + 5;
                 ctx.fillRect(x, y, size, size);
             }
-            
-           
             ctx.fillStyle = '#000000';
             ctx.font = '12px Arial';
             ctx.textAlign = 'center';
             ctx.fillText('Scan QR Code untuk pembayaran', canvas.width / 2, canvas.height - 10);
         }
         
-        
         function showNotifications() {
             const notificationList = document.getElementById('notificationList');
             let index = 0;
-            
-            
             updateNotification();
-            
-           
             setInterval(updateNotification, 3000);
-            
             function updateNotification() {
                 const notification = notifications[index];
                 const listItem = document.createElement('li');
                 listItem.className = 'notification-item';
                 listItem.innerHTML = notification.content;
-                
                 notificationList.prepend(listItem);
-                
-                
                 if (notificationList.children.length > 5) {
                     notificationList.removeChild(notificationList.lastChild);
                 }
-                
                 index = (index + 1) % notifications.length;
             }
         }
         
-       
         function showComments() {
             const commentsList = document.getElementById('commentsList');
-            
             comments.forEach(comment => {
                 const commentItem = document.createElement('div');
                 commentItem.className = 'comment-item';
@@ -788,34 +553,41 @@
             });
         }
         
-       
         document.getElementById('commentForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const userName = document.getElementById('userName').value;
             const userComment = document.getElementById('userComment').value;
-            
             if (userName && userComment) {
-                
                 document.getElementById('commentForm').reset();
-                
-               
                 alert('Komentar berhasil dikirim! (Tidak disimpan)');
             }
         });
         
-       
+        // Tawk.to Live Chat Integration
         document.getElementById('tawk-button').addEventListener('click', function() {
-            alert('Fitur Live Chat akan diaktifkan di sini. Anda dapat mengintegrasikan Tawk.to dengan menambahkan kode widget mereka.');
-            // Untuk implementasi sebenarnya, Anda perlu menambahkan kode widget Tawk.to di sini
-            // Contoh: Tawk_API.toggle();
+            if(typeof Tawk_API !== 'undefined') {
+                Tawk_API.toggle();
+            }
         });
-        
         
         window.onload = function() {
             showNotifications();
             showComments();
         };
     </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/69047f65b22c021953b686a6/1j8sp3a53';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>
