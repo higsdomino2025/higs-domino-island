@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIGS DOMINO ISLAND - VIP</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        
+        .ball-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .ball {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #ffd700, #ff6b00);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+            animation: floatBall 15s infinite linear;
+        }
+        
+        .ball-1 {
+            background: radial-gradient(circle at 30% 30%, #ffd700, #ff6b00);
+            animation: floatBall1 18s infinite linear;
+        }
+        
+        .ball-2 {
+            background: radial-gradient(circle at 30% 30%, #00ff88, #0066ff);
+            animation: floatBall2 22s infinite linear;
+        }
+        
+        .ball-3 {
+            background: radial-gradient(circle at 30% 30%, #ff0080, #ff00ff);
+            animation: floatBall3 20s infinite linear;
+            width: 30px;
+            height: 30px;
+        }
+        
+        .ball-4 {
+            background: radial-gradient(circle at 30% 30%, #00ffff, #0088ff);
+            animation: floatBall4 25s infinite linear;
+            width: 35px;
+            height: 35px;
+        }
+        
+        @keyframes floatBall1 {
+            0% {
+                top: 10%;
+                left: -5%;
+                transform: rotate(0deg);
+            }
+            25% {
+                top: 30%;
+                left: 25%;
+                transform: rotate(90deg);
+            }
+            50% {
+                top: 60%;
+                left: 50%;
+                transform: rotate(180deg);
+            }
+            75% {
+                top: 40%;
+                left: 75%;
+                transform: rotate(270deg);
+            }
+            100% {
+                top: 10%;
+                left: 105%;
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes floatBall2 {
+            0% {
+                top: 80%;
+                left: 105%;
+                transform: rotate(0deg);
+            }
+            25% {
+                top: 60%;
+                left: 75%;
+                transform: rotate(-90deg);
+            }
+            50% {
+                top: 30%;
+                left: 50%;
+                transform: rotate(-180deg);
+            }
+            75% {
+                top: 50%;
+                left: 25%;
+                transform: rotate(-270deg);
+            }
+            100% {
+                top: 80%;
+                left: -5%;
+                transform: rotate(-360deg);
+            }
+        }
+        
+        @keyframes floatBall3 {
+            0% {
+                top: 20%;
+                left: 50%;
+                transform: rotate(0deg);
+            }
+            33% {
+                top: 70%;
+                left: 80%;
+                transform: rotate(120deg);
+            }
+            66% {
+                top: 40%;
+                left: 20%;
+                transform: rotate(240deg);
+            }
+            100% {
+                top: 20%;
+                left: 50%;
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes floatBall4 {
+            0% {
+                top: 60%;
+                left: 20%;
+                transform: rotate(0deg);
+            }
+            33% {
+                top: 20%;
+                left: 70%;
+                transform: rotate(-120deg);
+            }
+            66% {
+                top: 80%;
+                left: 60%;
+                transform: rotate(-240deg);
+            }
+            100% {
+                top: 60%;
+                left: 20%;
+                transform: rotate(-360deg);
+            }
+        }
+        
+       
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+       
+        header {
+            text-align: center;
+            padding: 30px 0;
+            position: relative;
+        }
+        
+        .logo {
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 3.5rem;
+            background: linear-gradient(to right, #CFB53B, #FFD700, #CFB53B);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+            margin-bottom: 10px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        
+        .vip-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+            color: #000;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+            margin-bottom: 30px;
+        }
+        
+        
+        .animated-text {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .animated-text span {
+            display: inline-block;
+            animation: bounce 0.5s ease infinite alternate;
+            margin: 0 2px;
+            color: #ffd700;
+        }
+        
+     
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-15px);
+                text-shadow: 0 5px 10px rgba(255, 215, 0, 0.5);
+            }
+        }
+        
+       
+        .animated-text span:nth-child(1) { animation-delay: 0.1s; }
+        .animated-text span:nth-child(2) { animation-delay: 0.2s; }
+        .animated-text span:nth-child(3) { animation-delay: 0.3s; }
+        .animated-text span:nth-child(4) { animation-delay: 0.4s; }
+        .animated-text span:nth-child(5) { animation-delay: 0.5s; }
+        .animated-text span:nth-child(6) { animation-delay: 0.6s; }
+        .animated-text span:nth-child(7) { animation-delay: 0.7s; }
+        .animated-text span:nth-child(8) { animation-delay: 0.8s; }
+        .animated-text span:nth-child(9) { animation-delay: 0.9s; }
+        .animated-text span:nth-child(10) { animation-delay: 1.0s; }
+        .animated-text span:nth-child(11) { animation-delay: 1.1s; }
+        .animated-text span:nth-child(12) { animation-delay: 1.2s; }
+        .animated-text span:nth-child(13) { animation-delay: 1.3s; }
+        .animated-text span:nth-child(14) { animation-delay: 1.4s; }
+        .animated-text span:nth-child(15) { animation-delay: 1.5s; }
+        .animated-text span:nth-child(16) { animation-delay: 1.6s; }
+        .animated-text span:nth-child(17) { animation-delay: 1.7s; }
+        
+      
+        #tawk-chat-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .tawk-button {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .tawk-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.7);
+        }
+        
+        .tawk-button i {
+            font-size: 1.2rem;
+        }
+        
+      
+        .notification-panel {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding: 15px;
+            z-index: 1000;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            max-height: 400px;
+            overflow: hidden;
+        }
+        
+        .notification-header {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #ffd700;
+            font-weight: bold;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 5px;
+        }
+        
+        .notification-list {
+            list-style: none;
+        }
+        
+        .notification-item {
+            padding: 8px 10px;
+            margin-bottom: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            border-left: 3px solid #ffd700;
+            animation: glow 2s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+            }
+            to {
+                box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+            }
+        }
+        
+        
+        .comment-form-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: 50px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #ffd700;
+            font-size: 1.8rem;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            background: rgba(0, 0, 0, 0.3);
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s;
+            resize: vertical;
+        }
+        
+        .form-group textarea {
+            min-height: 80px;
+            max-height: 120px;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+        
+        
+        .qrcode-section {
+            text-align: center;
+            margin: 30px 0;
+            display: none;
+        }
+        
+        .qrcode-container {
+            display: inline-block;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+        
+        .waiting-message {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #ffd700;
+            display: none;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+        
+        
+        .comments-section {
+            margin-top: 50px;
+        }
+        
+        .comments-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .comments-count {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        .comments-list {
+            max-height: 500px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        .comment-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 3px solid rgba(255, 215, 0, 0.5);
+        }
+        
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .comment-user {
+            font-weight: bold;
+            color: #ffd700;
+        }
+        
+        .comment-date {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .comment-text {
+            line-height: 1.5;
+        }
+        
+       
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .notification-panel {
+                position: relative;
+                width: 100%;
+                top: 0;
+                right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .animated-text {
+                font-size: 1.5rem;
+            }
+            
+            .comment-form-section {
+                margin-right: auto;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="ball-animation">
+        <div class="ball ball-1"></div>
+        <div class="ball ball-2"></div>
+        <div class="ball ball-3"></div>
+        <div class="ball ball-4"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                
+            </div>
+            <h1 class="title">HIGS DOMINO ISLAND</h1>
+            <div class="vip-badge">VIP</div>
+            
+            
+            <div class="animated-text">
+                <span>C</span>
+                <span>E</span>
+                <span>P</span>
+                <span>A</span>
+                <span>T</span>
+                <span>&nbsp;</span>
+                <span>D</span>
+                <span>A</span>
+                <span>N</span>
+                <span>&nbsp;</span>
+                <span>T</span>
+                <span>E</span>
+                <span>R</span>
+                <span>P</span>
+                <span>E</span>
+                <span>C</span>
+                <span>A</span>
+                <span>Y</span>
+                <span>A</span>
+            </div>
+        </header>
+        
+        <div class="notification-panel">
+            <div class="notification-header">Aktivitas Terbaru</div>
+            <ul class="notification-list" id="notificationList">
+               
+            </ul>
+        </div>
+        
+        <section class="comment-form-section">
+            <h2 class="section-title">Tulis Komentar Anda</h2>
+            <form id="commentForm">
+                <div class="form-group">
+                    <label for="userName">Nama</label>
+                    <input type="text" id="userName" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="userComment">Komentar</label>
+                    <textarea id="userComment" placeholder="Tulis komentar Anda di sini..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">KIRIM KOMENTAR</button>
+            </form>
+        </section>
+        
+        <section class="qrcode-section" id="qrcodeSection">
+            <h2 class="section-title">Pembayaran QRIS</h2>
+            <div class="qrcode-container">
+                
+                <canvas id="qrcodeCanvas"></canvas>
+            </div>
+            <div class="waiting-message" id="waitingMessage">SILAHKAN TUNGGU...</div>
+        </section>
+        
+        <section class="comments-section">
+            <div class="comments-header">
+                <h2 class="section-title">Komentar Pelanggan</h2>
+                <div class="comments-count">7K Komentar</div>
+            </div>
+            <div class="comments-list" id="commentsList">
+               
+            </div>
+        </section>
+    </div>
+
+    <!-- Live Chat Tawk.to -->
+    <div id="tawk-chat-container">
+        <button class="tawk-button" id="tawk-button">
+            <i>💬</i> Live Chat
+        </button>
+    </div>
+
+    <script>
+        
+        const notifications = [
+            { type: "person", content: "Andi membeli 2B" },
+            { type: "brand", content: "Samsung menjual 50B" },
+            { type: "person", content: "Budi Santoso membeli PAKET VIP" },
+            { type: "brand", content: "Xiaomi membeli 10B" },
+            { type: "person", content: "Sari Indah menjual 25B" },
+            { type: "brand", content: "OPPO membeli 5B" },
+            { type: "person", content: "Rudi Hartono membeli 3B" },
+            { type: "brand", content: "VIVO menjual 30B" },
+            { type: "person", content: "Dian Permatasari membeli PAKET VIP" },
+            { type: "brand", content: "Realme membeli 8B" },
+            { type: "person", content: "Fajar Setiawan menjual 15B" },
+            { type: "brand", content: "Apple membeli 12B" },
+            { type: "person", content: "Maya Wulandari membeli PAKET VIP" },
+            { type: "brand", content: "Huawei menjual 40B" },
+            { type: "person", content: "Rizki Ramadhan membeli 6B" },
+            { type: "brand", content: "Sony membeli 7B" },
+            { type: "person", content: "Nina Susanti menjual 20B" },
+            { type: "brand", content: "LG membeli 9B" },
+            { type: "person", content: "Hendra Kurniawan membeli PAKET VIP" },
+            { type: "brand", content: "Asus menjual 35B" },
+            { type: "person", content: "Siti Nurhaliza membeli 4B" },
+            { type: "brand", content: "Lenovo membeli 11B" },
+            { type: "person", content: "Agus Salim menjual 45B" },
+            { type: "brand", content: "Acer membeli PAKET VIP" },
+            { type: "person", content: "Rina Melati membeli 13B" },
+            { type: "brand", content: "Dell menjual 55B" },
+            { type: "person", content: "Bambang Pamungkas membeli PAKET VIP" },
+            { type: "brand", content: "HP membeli 14B" },
+            { type: "person", content: "Dewi Sartika menjual 60B" },
+            { type: "brand", content: "Toshiba membeli 16B" },
+            { type: "person", content: "Eko Prasetyo membeli PAKET VIP" },
+            { type: "brand", content: "MSI menjual 65B" },
+            { type: "person", content: "Fitri Handayani membeli 17B" },
+            { type: "brand", content: "Gigabyte membeli 18B" },
+            { type: "person", content: "Gilang Ramadan menjual 70B" },
+            { type: "brand", content: "ZTE membeli PAKET VIP" },
+            { type: "person", content: "Hana Lestari membeli 19B" },
+            { type: "brand", content: "Infinix menjual 75B" },
+            { type: "person", content: "Iwan Setiawan membeli PAKET VIP" },
+            { type: "brand", content: "Tecno membeli 21B" },
+            { type: "person", content: "Jihan Aulia menjual 80B" },
+            { type: "brand", content: "OnePlus membeli 22B" },
+            { type: "person", content: "Kiki Amalia membeli PAKET VIP" },
+            { type: "brand", content: "Google menjual 85B" },
+            { type: "person", content: "Lukman Hakim membeli 23B" },
+            { type: "brand", content: "Motorola membeli 24B" },
+            { type: "person", content: "Mila Kurnia menjual 90B" },
+            { type: "brand", content: "Blackberry membeli PAKET VIP" },
+            { type: "person", content: "Nanda Pratama membeli 26B" },
+            { type: "brand", content: "HTC menjual 95B" }
+        ];
+        
+        
+        const comments = [
+            { user: "Ahmad S.", date: "2 hari lalu", text: "Pelayanan sangat cepat dan memuaskan. Sudah beli 3x dan selalu puas!" },
+            { user: "Budi Kurniawan", date: "3 hari lalu", text: "Trusted seller! Proses cepat dan aman. Recommended banget!" },
+            { user: "Sari Indah", date: "4 hari lalu", text: "Baru pertama kali beli dan sangat puas dengan pelayanannya. Terima kasih!" },
+            { user: "Rudi Hartono", date: "5 hari lalu", text: "Pelayanan ramah dan proses cepat. Sudah beli berkali-kali dan selalu puas." },
+            { user: "Dian P.", date: "1 minggu lalu", text: "Awalnya ragu, tapi ternyata benar-benar terpercaya. Terima kasih!" },
+            { user: "Fajar S.", date: "1 minggu lalu", text: "Proses cepat, seller ramah. Pokoknya recommended banget!" },
+            { user: "Maya W.", date: "2 minggu lalu", text: "Barang sesuai pesanan, proses cepat. Puas banget!" },
+            { user: "Rizki A.", date: "2 minggu lalu", text: "Seller sangat profesional dan cepat tanggap. Terima kasih banyak!" },
+            { user: "Nina S.", date: "3 minggu lalu", text: "Sudah beli beberapa kali dan selalu puas. Pelayanan terbaik!" },
+            { user: "Hendra K.", date: "3 minggu lalu", text: "Proses cepat dan aman. Seller sangat terpercaya!" },
+            { user: "Irfan Hakim", date: "1 bulan lalu", text: "Transaksi lancar, barang sampai dengan cepat. Mantap!" },
+            { user: "Joko Susilo", date: "1 bulan lalu", text: "Seller responsif dan ramah. Proses tidak berbelit-belit." },
+            { user: "Kartika Sari", date: "1 bulan lalu", text: "Pengiriman super cepat! Barang sesuai ekspektasi." },
+            { user: "Lukman N.", date: "1 bulan lalu", text: "Harga kompetitif, pelayanan memuaskan. Akan repeat order!" },
+            { user: "M. Rizky", date: "1 bulan lalu", text: "Terima kasih untuk pelayanan yang excellent!" },
+            { user: "Nadia Putri", date: "2 bulan lalu", text: "Seller sangat sabar menjawab pertanyaan. Recommended!" },
+            { user: "Oscar Dinata", date: "2 bulan lalu", text: "Proses mudah dan cepat. Tidak perlu menunggu lama." },
+            { user: "Putra Maulana", date: "2 bulan lalu", text: "Kualitas barang bagus, pengiriman tepat waktu." },
+            { user: "Queen Felisha", date: "2 bulan lalu", text: "Seller profesional banget! Puas dengan pelayanannya." },
+            { user: "Rangga Pratama", date: "2 bulan lalu", text: "Transaksi aman dan terpercaya. Thank you seller!" },
+            { user: "Santi Wulandari", date: "3 bulan lalu", text: "Barang original, pengiriman cepat. Good job!" },
+            { user: "Taufik Hidayat", date: "3 bulan lalu", text: "Pelayanan memuaskan, respon cepat. Sukses selalu!" },
+            { user: "Umi Kulsum", date: "3 bulan lalu", text: "Seller ramah dan pengiriman sangat cepat. Recommended!" },
+            { user: "Vino Bastian", date: "3 bulan lalu", text: "Proses transaksi mudah dan cepat. Very satisfied!" },
+            { user: "Wulan Guritno", date: "4 bulan lalu", text: "Barang sesuai deskripsi, pengiriman tepat waktu." },
+            { user: "Xavier Miller", date: "4 bulan lalu", text: "Seller sangat helpful dan fast respon. Good!" },
+            { user: "Yuniarta D.", date: "4 bulan lalu", text: "Pengalaman belanja yang menyenangkan. Terima kasih!" },
+            { user: "Zahra Mutia", date: "4 bulan lalu", text: "Seller terpercaya, barang berkualitas. Will order again!" },
+            { user: "Aldi Taher", date: "5 bulan lalu", text: "Proses cepat, komunikasi baik. Very recommended!" },
+            { user: "Baim Wong", date: "5 bulan lalu", text: "Pelayanan excellent! Seller sangat profesional." },
+            { user: "Cindy Gulla", date: "5 bulan lalu", text: "Barang sampai dengan selamat, packing rapi." },
+            { user: "Deddy S.", date: "5 bulan lalu", text: "Seller fast respon dan ramah. Happy with the service!" },
+            { user: "Eko Kurniawan", date: "6 bulan lalu", text: "Transaksi lancar, pengiriman cepat. Satisfied!" },
+            { user: "Fitri Octora", date: "6 bulan lalu", text: "Seller sangat kooperatif dan helpful. Thanks!" },
+            { user: "Guntur S.", date: "6 bulan lalu", text: "Barang sesuai pesanan, kualitas bagus. Recommended!" },
+            { user: "Hesti Purwadinata", date: "6 bulan lalu", text: "Pengiriman super cepat! Seller sangat responsif." },
+            { user: "Ivan Gunawan", date: "7 bulan lalu", text: "Proses mudah, tidak ribet. Very good service!" },
+            { user: "Jessica Mila", date: "7 bulan lalu", text: "Seller ramah dan pengiriman tepat waktu. Perfect!" },
+            { user: "Kevin Aprilio", date: "7 bulan lalu", text: "Barang original, harga reasonable. Will be back!" },
+            { user: "Luna Maya", date: "7 bulan lalu", text: "Seller sangat profesional dan fast respon. Excellent!" },
+            { user: "Tolol", date: "7 bulan lalu", text: "Seller sangat profesional dan fast respon. Excellent!" },
+        ];
+        
+        
+        function generateQRCode() {
+            const canvas = document.getElementById('qrcodeCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            canvas.width = 200;
+            canvas.height = 200;
+            
+            
+            ctx.fillStyle = '#FFFFFF';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+           
+            ctx.fillStyle = '#000000';
+            
+            
+            ctx.fillRect(10, 10, 50, 50);
+            ctx.fillRect(canvas.width - 60, 10, 50, 50);
+            ctx.fillRect(10, canvas.height - 60, 50, 50);
+            
+            
+            for (let i = 0; i < 100; i++) {
+                const x = Math.floor(Math.random() * 120) + 40;
+                const y = Math.floor(Math.random() * 120) + 40;
+                const size = Math.floor(Math.random() * 10) + 5;
+                ctx.fillRect(x, y, size, size);
+            }
+            
+           
+            ctx.fillStyle = '#000000';
+            ctx.font = '12px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Scan QR Code untuk pembayaran', canvas.width / 2, canvas.height - 10);
+        }
+        
+        
+        function showNotifications() {
+            const notificationList = document.getElementById('notificationList');
+            let index = 0;
+            
+            
+            updateNotification();
+            
+           
+            setInterval(updateNotification, 3000);
+            
+            function updateNotification() {
+                const notification = notifications[index];
+                const listItem = document.createElement('li');
+                listItem.className = 'notification-item';
+                listItem.innerHTML = notification.content;
+                
+                notificationList.prepend(listItem);
+                
+                
+                if (notificationList.children.length > 5) {
+                    notificationList.removeChild(notificationList.lastChild);
+                }
+                
+                index = (index + 1) % notifications.length;
+            }
+        }
+        
+       
+        function showComments() {
+            const commentsList = document.getElementById('commentsList');
+            
+            comments.forEach(comment => {
+                const commentItem = document.createElement('div');
+                commentItem.className = 'comment-item';
+                commentItem.innerHTML = `
+                    <div class="comment-header">
+                        <div class="comment-user">${comment.user}</div>
+                        <div class="comment-date">${comment.date}</div>
+                    </div>
+                    <div class="comment-text">${comment.text}</div>
+                `;
+                commentsList.appendChild(commentItem);
+            });
+        }
+        
+       
+        document.getElementById('commentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const userName = document.getElementById('userName').value;
+            const userComment = document.getElementById('userComment').value;
+            
+            if (userName && userComment) {
+                
+                document.getElementById('commentForm').reset();
+                
+               
+                alert('Komentar berhasil dikirim! (Tidak disimpan)');
+            }
+        });
+        
+       
+        document.getElementById('tawk-button').addEventListener('click', function() {
+            alert('Fitur Live Chat akan diaktifkan di sini. Anda dapat mengintegrasikan Tawk.to dengan menambahkan kode widget mereka.');
+            // Untuk implementasi sebenarnya, Anda perlu menambahkan kode widget Tawk.to di sini
+            // Contoh: Tawk_API.toggle();
+        });
+        
+        
+        window.onload = function() {
+            showNotifications();
+            showComments();
+        };
+    </script>
+</body>
+</html>
